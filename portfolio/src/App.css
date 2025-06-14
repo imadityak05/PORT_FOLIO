@@ -1,0 +1,358 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /* Colors */
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --primary-color: #4e4e52;
+  --primary-dark-color: #242426;
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+
+  /* Font and Typography */
+  --body-font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* Margin Bottom */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  /* 16px base, for rem units */
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-left: 6rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*=============== REUSABLE CLASSES ===============*/
+.section {
+  padding: clamp(2rem, 6vw, 6rem) 0 clamp(1rem, 3vw, 2rem);
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Responsive grid helpers */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Example grid layouts for cards/projects */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+
+/* Responsive breakpoints for grids */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=============== BUTTONS ===============*/
+.button,
+.home__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--primary-color, #4f46e5);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.button:hover,
+.home__button:hover {
+  background-color: var(--primary-dark-color, #4338ca);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive button adjustments */
+@media screen and (max-width: 992px) {
+
+  .button,
+  .home__button {
+    padding: 1rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home__button {
+    margin: 1.5rem auto 0;
+    display: block;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .button,
+  .home__button {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--small-font-size);
+  }
+}
+
+/*=============== UTILITIES ===============*/
+.mt-1 {
+  margin-top: var(--mb-1);
+}
+
+.mt-2 {
+  margin-top: var(--mb-2);
+}
+
+.pb-1 {
+  padding-bottom: var(--mb-1);
+}
+
+.pb-2 {
+  padding-bottom: var(--mb-2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*=============== ACCESSIBILITY ===============*/
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 2px;
+}
+
+/*=============== RESPONSIVE TYPOGRAPHY ===============*/
+@media screen and (max-width: 1400px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.35rem;
+    --h3-font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.1rem;
+    --normal-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 1.75rem;
+    --h1-font-size: 1.25rem;
+    --normal-font-size: 0.813rem;
+  }
+}
+
+/*=============== RESPONSIVE BREAKPOINTS ===============*/
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding-inline: var(--mb-1-5);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-bottom: var(--header-height);
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-2);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    padding-inline: 0.8rem;
+  }
+}

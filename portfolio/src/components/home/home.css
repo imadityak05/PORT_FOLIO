@@ -1,0 +1,214 @@
+/* ====== HOME SECTION ====== */
+.home {
+    padding: clamp(3rem, 8vw, 6rem) 0 clamp(1.5rem, 3vw, 2rem);
+    background-color: var(--body-color);
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5rem;
+    overflow-x: hidden;
+    /* Prevents accidental horizontal scroll */
+}
+
+/* HOME CONTAINER */
+.home__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    /* Add horizontal padding for mobile safety */
+}
+
+/* IMAGE WRAPPER */
+.home__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* PROFILE IMAGE */
+.home__img {
+    max-width: 270px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: auto;
+    object-fit: cover;
+    background: #fff;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* CONTENT */
+.home__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    align-items: flex-start;
+    order: 2;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.home__title {
+    font-size: var(--big-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    word-break: break-word;
+}
+
+.home__name {
+    color: var(--title-color-dark);
+}
+
+.home__subtitle {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.home__description {
+    font-size: var(--normal-font-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: var(--mb-1, 1.5rem);
+    word-break: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.home__socials {
+    display: flex;
+    gap: 1.25rem;
+    margin: 1.2rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home__social-link {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+
+.home__social-link:hover,
+.home__social-link:focus {
+    color: var(--title-color-dark);
+    outline: none;
+}
+
+.button.button--flex {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets & Mobile (≤ 900px) */
+@media screen and (max-width: 900px) {
+    .home {
+        margin-top: 3rem;
+    }
+
+    .home__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+        padding: 0 1rem;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .home__img-wrapper {
+        order: 1;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home__content {
+        order: 2;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home__socials {
+        justify-content: center;
+        margin: 1.2rem 0;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Small screens (≤ 576px) */
+@media screen and (max-width: 576px) {
+    .home {
+        margin-top: 1.5rem;
+        padding: clamp(1.5rem, 5vw, 3rem) 0 2rem;
+        overflow-x: hidden;
+    }
+
+    .home__img {
+        max-width: 180px;
+    }
+
+    .home__title {
+        font-size: 1.5rem;
+    }
+
+    .home__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .home__description {
+        font-size: var(--small-font-size, 1rem);
+    }
+
+    .home__social-link {
+        font-size: 1.1rem;
+    }
+
+    .button.button--flex {
+        padding: 0.85rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tiny phones (≤ 350px) */
+@media screen and (max-width: 350px) {
+    .home__img {
+        max-width: 90px;
+    }
+
+    .home__title {
+        font-size: 1.1rem;
+    }
+
+    .home__subtitle {
+        font-size: var(--smaller-font-size, 0.9rem);
+    }
+
+    .home__social-link {
+        font-size: 0.9rem;
+    }
+}
