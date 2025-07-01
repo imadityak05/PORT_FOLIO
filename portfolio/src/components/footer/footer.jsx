@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer__container container">
         <div className="footer__socials">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/imaadityak._/"
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
@@ -16,7 +16,7 @@ const Footer = () => {
             <i className="uil uil-instagram"></i>
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/im_adityasaha"
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"

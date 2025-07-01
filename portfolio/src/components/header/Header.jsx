@@ -1,70 +1,148 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 import "./header.css";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="header">
-      <nav className="nav container">
-        <a href="/" className="nav__logo"><b>Aditya</b></a>
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+      <nav className="nav">
+        <Link to="home" smooth={true} duration={500} className="nav__logo">
+          Aditya
+        </Link>
 
-        <div className="nav__menu">
-          <ul className="nav__list grid">
+        <div className={`nav__menu ${isMenuOpen ? "show-menu" : ""}`}>
+          <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link">
-                <i className="uil uil-estate nav__icon"></i>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="nav__link"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#about" className="nav__link">
-                <i className="uil uil-user nav__icon"></i>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="nav__link"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
                 About
-              </a>
+              </Link>
             </li>
 
-            {/* === Education Section Link Added Here === */}
             <li className="nav__item">
-              <a href="#education" className="nav__link">
-                <i className="uil uil-graduation-cap nav__icon"></i>
+              <Link
+                to="education"
+                smooth={true}
+                duration={500}
+                className="nav__link"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
                 Education
-              </a>
+              </Link>
             </li>
-            {/* ======================================== */}
 
             <li className="nav__item">
-              <a href="#skills" className="nav__link">
-                <i className="uil uil-file-alt nav__icon"></i>
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="nav__link"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
                 Skills
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#projects" className="nav__link">
-                <i className="uil uil-layers nav__icon"></i>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="nav__link"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
                 Projects
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#contact" className="nav__link">
-                <i className="uil uil-message nav__icon"></i>
-                Contact
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i>
-                Portfolio
-              </a>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="nav__link nav__link-button"
+                onClick={closeMenu}
+                activeClass="active"
+                spy={true}
+                offset={-70}
+              >
+                Contact Me
+              </Link>
             </li>
           </ul>
-          <i className="uil uil-times nav__close"></i>
+
+          <button className="nav__close" onClick={toggleMenu} aria-label="Close menu">
+            <FaTimes />
+          </button>
         </div>
-        <div className="nav__toggle">
-          <i className="uil uil-apps"></i>
-        </div>
+
+        <button 
+          className="nav__toggle" 
+          onClick={toggleMenu} 
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
       </nav>
     </header>
   );
