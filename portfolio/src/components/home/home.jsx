@@ -13,7 +13,7 @@ const Home = () => {
             </h1>
             <h3 className="home__subtitle"> Aspiring Software Developer Engineer</h3>
             <p className="home__description">
-              Pre-Final-year B.Tech student in Electronics and Communication Engineering at NIT Patna with a solid foundation in Data Structures, Algorithms, and full-stack web development using the MERN stack. Experienced in building scalable applications such as a doctor appointment system and a food delivery platform with secure authentication, responsive design, and real-time features. Solved over 500 problems on LeetCode with a contest rating of 1580+, and achieved top ranks in national-level exams and NPTEL courses. Completed virtual internships at Accenture and Deloitte, gaining exposure to agile development, Java, Spring Boot, and data analysis.
+              Final-year B.Tech student in Electronics and Communication Engineering at NIT Patna with a solid foundation in Data Structures, Algorithms, and full-stack web development using the MERN stack. Experienced in building scalable applications such as a doctor appointment system and a food delivery platform with secure authentication, responsive design, and real-time features. Solved over 500 problems on LeetCode with a contest rating of 1580+, and achieved top ranks in national-level exams and NPTEL courses. Completed virtual internships at Accenture and Deloitte, gaining exposure to agile development, Java, Spring Boot, and data analysis.
             </p>
 
             <div className="home__socials">
