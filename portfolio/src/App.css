@@ -60,8 +60,8 @@ body,
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--current-bg);
-  color: var(--current-text);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Ensure all elements inherit the correct colors */
@@ -71,7 +71,7 @@ body,
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--current-title);
+  color: var(--title-color);
   font-weight: var(--font-semi-bold);
   line-height: 1.2;
   margin-bottom: 0.5em;
@@ -122,10 +122,10 @@ ul, ol {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--current-bg);
-  color: var(--current-text);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  background: linear-gradient(135deg, var(--bg-color) 0%, var(--container-color) 100%);
 }
 
 main {
@@ -154,7 +154,7 @@ main {
   font-size: var(--h2-font-size);
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--current-title);
+  color: var(--title-color);
 }
 
 /*=============== REUSABLE CLASSES ===============*/

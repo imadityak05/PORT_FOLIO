@@ -2,9 +2,9 @@
 .education {
     scroll-margin-top: 5rem;
     padding: clamp(4rem, 10vw, 8rem) clamp(1rem, 5vw, 2rem);
-    background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+    background: var(--bg-color);
     position: relative;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 /* Add subtle pattern overlay */
@@ -69,15 +69,19 @@
 }
 
 .education__card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--container-color);
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .education__card::before {
@@ -111,7 +115,7 @@
 
 .education__institution {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: var(--title-color);
     margin-bottom: 0.75rem;
 }
 
@@ -119,12 +123,14 @@
     font-size: 1.1rem;
     color: var(--text-color);
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .education__year {
     font-size: 1rem;
     color: var(--text-color-light);
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .education__cgpa {
@@ -143,17 +149,18 @@
 /* Progress Bar */
 .education__progress {
     height: 6px;
-    background: rgba(102, 126, 234, 0.1);
+    background: var(--border-color);
     border-radius: 3px;
     overflow: hidden;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .education__progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
     width: 72%;
     transition: width 0.3s ease;
+    border-radius: 3px;
 }
 
 /* Responsive */

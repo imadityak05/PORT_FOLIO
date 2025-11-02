@@ -1,6 +1,4 @@
 import React from 'react';
-import { ThemeProvider } from './contexts/ThemeContext';
-import ThemeToggle from './components/theme/ThemeToggle';
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from './components/home/home';
@@ -10,24 +8,23 @@ import Education from './components/education/education';
 import Projects from './components/projects/projects';
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
+import ThemeToggle from './components/ThemeToggle';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <div className="app">
-        <Header />
-        <ThemeToggle />
-        <main>
-          <Home />
-          <About />
-          <Education />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="app">
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+      <ThemeToggle />
+    </div>
   );
 };
 

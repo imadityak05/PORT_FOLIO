@@ -1,7 +1,7 @@
 /* ========== PROJECTS SECTION ========== */
 .projects {
   padding: 6rem 5%;
-  background-color: var(--current-bg);
+  background-color: var(--bg-color);
   width: 100%;
   box-sizing: border-box;
   max-width: 1600px;
@@ -19,10 +19,13 @@
 .section__title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--current-title);
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+  text-align: center;
   position: relative;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section__title::after {
@@ -38,8 +41,10 @@
 
 .section__subtitle {
   font-size: 1.1rem;
-  color: var(--current-text);
-  margin-top: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
   line-height: 1.6;
 }
 
@@ -49,6 +54,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
 }
 
 /* Projects Grid - Desktop */
@@ -62,22 +68,22 @@
 
 /* Project Card */
 .project__card {
-  background: var(--current-container);
-  border: 1px solid var(--current-border);
+  background: var(--container-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   position: relative;
 }
 
 .project__card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-color: var(--primary-color-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+  background: var(--bg-color);
 }
 
 .project__image-container {
@@ -85,7 +91,9 @@
   width: 100%;
   padding-top: 60%;
   overflow: hidden;
-  background: var(--current-bg);
+  background: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .project__img {
@@ -140,7 +148,7 @@
 }
 
 .project__link:hover {
-  background: var(--primary-color-dark);
+  background: var(--primary-color);
   transform: translateY(-3px) scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -158,7 +166,7 @@
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: var(--current-title);
+  color: var(--title-color);
   transition: color 0.3s ease;
 }
 
@@ -275,7 +283,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--current-border);
+  background: var(--border-color);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -283,7 +291,7 @@
 }
 
 .carousel-dot.active {
-  background: var(--primary-color);
+  background: var(--border-color);
   transform: scale(1.2);
 }
 

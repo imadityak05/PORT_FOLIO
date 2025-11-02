@@ -1,9 +1,9 @@
 /* Footer */
 .footer {
-    background-color: var(--current-bg);
+    background-color: var(--bg-color);
     padding: 2.5rem 0;
     text-align: center;
-    border-top: 1px solid var(--current-border);
+    border-top: 1px solid var(--border-color);
     margin-top: auto;
     /* Push footer to bottom */
 }
@@ -33,7 +33,7 @@
     height: 40px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.05);
-    color: var(--current-text);
+    color: var(--text-color);
     font-size: 1.25rem;
     transition: all 0.3s ease;
 }
@@ -48,7 +48,7 @@
 /* Copyright Text */
 .footer__copy {
     font-size: 0.9375rem;
-    color: var(--current-text-light);
+    color: var(--text-color-light);
     margin: 0;
     line-height: 1.6;
 }

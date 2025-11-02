@@ -16,10 +16,7 @@ export const skillIcons = {
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     color: '#61DAFB' 
   },
-  'TypeScript': { 
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    color: '#3178C6' 
-  },
+  
   
   // Backend
   'Node.js': { 
@@ -68,6 +65,11 @@ export const skillIcons = {
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
     color: '#03A9F4' 
   },
+  //DataBase Management System
+  'DBMS': { 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    color: '#47A248' 
+  },
   
   // Languages
   'C/C++': { 
@@ -102,31 +104,31 @@ export const skillLevels = {
   'HTML': 95,
   'CSS / Tailwind CSS': 90,
   'JavaScript': 85,
-  'React.js': 90,
-  'TypeScript': 80,
+  'React.js': 80,
   'Node.js': 85,
   'Express.js': 80,
   'Postman': 85,
   'MongoDB': 85,
-  'Firebase': 80,
+  'Firebase': 50,
   'Data Structures': 95,
   'Computer Networks': 90,
   'OOPs': 90,
   'Operating System': 85,
-  'Python': 85,
+  'Python': 60,
   'Artificial Intelligence': 80,
+  'DBMS': 85,
   'C/C++': 85,
   'Java': 80,
-  'Git & GitHub': 90,
+  'Git & GitHub': 70,
   'VS Code': 95,
-  'Figma': 85,
-  'Netlify / Vercel': 80
+  'Figma': 40,
+  'Netlify / Vercel': 40
 };
 
 export const skillsData = {
   frontend: {
     title: "Frontend Development",
-    items: ["HTML", "CSS / Tailwind CSS", "JavaScript", "React.js", "TypeScript"]
+    items: ["HTML", "CSS / Tailwind CSS", "JavaScript", "React.js"]
   },
   backend: {
     title: "Backend Development",
@@ -134,7 +136,7 @@ export const skillsData = {
   },
   coursework: {
     title: "Coursework",
-    items: ["Data Structures", "Computer Networks", "OOPs", "Operating System", "Python", "Artificial Intelligence"]
+    items: ["Data Structures", "Computer Networks", "OOPs", "Operating System", "Python", "Artificial Intelligence" ,"DBMS"]
   },
   languages: {
     title: "Programming Languages",

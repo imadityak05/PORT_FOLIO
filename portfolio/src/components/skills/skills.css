@@ -2,7 +2,7 @@
 .skills {
     scroll-margin-top: 5rem;
     padding: 100px 1rem 5rem;
-    background-color: var(--body-color);
+    background-color: var(--bg-color);
     position: relative;
     overflow: hidden;
     min-height: 100vh;
@@ -219,7 +219,6 @@
 
 .skills__category {
     font-size: 1.8rem;
-    /* Increased from 1.5rem */
     color: var(--title-color);
     margin: 0 0 2rem 0;
     text-align: center;

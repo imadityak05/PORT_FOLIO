@@ -32,7 +32,7 @@ const projectData = [
     desc: 'A full-stack car rental platform built with the MERN stack, enabling users to browse, book, and manage car rentals with secure authentication and real-time availability.',
     image: projectImg1,
     live: '#',
-    github: '',
+    github: 'https://github.com/imadityak05/car-rental',
     tags: ['React', 'MongoDB', 'Express.js','Node.js', 'Material-UI' ,'stripe'],
   },
   {
@@ -50,7 +50,7 @@ const projectData = [
     title: 'Portfolio Website',
     desc: 'A modern, responsive portfolio website to showcase projects and skills effectively.',
     image: projectImg3,
-    live: '#',
+    live: 'https://car-rental-server-virid.vercel.app/',
     github: 'https://github.com/imadityak05/PORT_FOLIO',
     tags: ['React', 'Framer Motion', 'CSS3', 'Responsive Design'],
   },
